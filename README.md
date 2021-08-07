@@ -1,3 +1,11 @@
 # airtag-glitcher
 
-Sorry I didn't know the talks would be online before the actual talk - hence still need to push here :)
+Build:
+
+```
+export  PICO_SDK_PATH=...
+mkdir build
+cmake ..
+make
+```
+
