@@ -57,6 +57,8 @@ void dv(uint32_t delay, uint32_t pulse) {
 
 int main() {
     stdio_init_all();
+    // Sleep X MS to Wait for USB Serial to initialize
+    while (!tud_cdc_connected()) { sleep_ms(100); }
     stdio_set_translate_crlf(&stdio_usb, false);
     pdnd_initialize();
     pdnd_enable_buffers(0);
